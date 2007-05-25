@@ -51,7 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
-#%multiarch_binaries %buildroot/%_bindir/%name-config
 
 %post -n %libname -p /sbin/ldconfig
 %postun -n %libname -p /sbin/ldconfig
@@ -61,8 +60,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS COPYING README
-%{_bindir}/%{name}_config
+%doc AUTHORS README
+%{_bindir}/%{name}*
 
 %files -n %libname
 %defattr(-,root,root)
@@ -75,6 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/*.a
 %{_libdir}/*.la
 %{_includedir}/*.h
-%{_bindir}/%name-config
-%multiarch %multiarch_bindir/%name-config
 
