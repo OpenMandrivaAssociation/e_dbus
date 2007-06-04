@@ -1,8 +1,8 @@
 %define	name	e_dbus
 %define	version 0.01
-%define release %mkrel 1
+%define release %mkrel 2
 
-%define major 	1
+%define major 0
 %define libname %mklibname %{name} %major
 %define libnamedev %mklibname %{name} %major -d
 
@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %libname
 %defattr(-,root,root)
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}*
 
 %files -n %libnamedev
 %defattr(-,root,root)
