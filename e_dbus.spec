@@ -14,7 +14,6 @@ License: 	BSD
 Group: 		System/Servers
 URL: 		http://get-e.org/
 Source: 	%{name}-%{version}.tar.bz2
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
 Buildrequires:	%{mklibname dbus-1_3}-devel, ecore-devel >= 0.9.9.038
 
 %description
