@@ -2,30 +2,16 @@
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
 
-%define cvs		20071220
-%if %cvs
-%define release		%mkrel 0.%cvs.1
-%else
-%define release		1
-%endif
-
 Summary: 	E17 basic convenience wrappers around dbus
 Name: 		e_dbus
-Version: 	0.1.0.003
-Release: 	%{release}
+Version: 	0.1.0.042
+Release: 	%mkrel 1
+Source:		%{name}-%{version}.tar.bz2
 License: 	BSD
 Group: 		System/Servers
-URL: 		http://get-e.org/
-%if %cvs
-Source0:	%{name}-%{cvs}.tar.lzma
-%else
-Source0: 	%{name}-%{version}.tar.bz2
-%endif
+URL: 		http://www.enlightenment.org/
 BuildRequires:	dbus-devel
-BuildRequires:	ecore-devel >= 0.9.9.038
-%if %cvs
-BuildRequires:	autoconf
-%endif
+BuildRequires:	ecore-devel
 
 %description
 This is the start of some basic convenience wrappers around dbus to
@@ -39,7 +25,7 @@ Group:		System/Libraries
 Obsoletes:	%{mklibname e_dbus 1} <= 0.01
 
 %description -n %{libname}
-Libraries for %{name}
+Libraries for %{name}.
 
 %package -n %{develname}
 Summary:	Headers and development libraries from %{name}
@@ -47,24 +33,15 @@ Group:		Development/Other
 Requires:	%{libname} = %{version}
 Requires:	%{name} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
-Obsoletes:	%{mklibname e_dbus 0 -d} < %{version}-%{release}
-Obsoletes:	%{mklibname e_dbus 1 -d} < %{version}-%{release}
 
 %description -n %{develname}
-%{name} development headers and libraries
+%{name} development headers and libraries.
 
 %prep
 rm -rf %{buildroot}
-%if %cvs
-%setup -q -n %{name}
-%else
 %setup -q
-%endif
 
 %build
-%if %cvs
-./autogen.sh
-%endif
 %configure2_5x
 %make
 
