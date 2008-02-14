@@ -9,6 +9,7 @@ Release: 	%mkrel 1
 Source:		%{name}-%{version}.tar.bz2
 License: 	BSD
 Group: 		System/Servers
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://www.enlightenment.org/
 BuildRequires:	dbus-devel
 BuildRequires:	ecore-devel
