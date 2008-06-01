@@ -4,9 +4,9 @@
 
 Summary: 	E17 basic convenience wrappers around dbus
 Name: 		e_dbus
-Version: 	0.1.0.042
-Release: 	%mkrel 2
-Source:		%{name}-%{version}.tar.bz2
+Version: 	0.5.0.043
+Release: 	%mkrel 1
+Source:		http://download.enlightenment.org/snapshots/LATEST/%{name}-%{version}.tar.bz2
 License: 	BSD
 Group: 		System/Servers
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -48,7 +48,7 @@ rm -rf %{buildroot}
 
 %install
 rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 
 %post -n %{libname} -p /sbin/ldconfig
 %postun -n %{libname} -p /sbin/ldconfig
