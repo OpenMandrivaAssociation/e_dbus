@@ -39,7 +39,6 @@ Provides:	%{name}-devel = %{version}-%{release}
 %{name} development headers and libraries.
 
 %prep
-rm -rf %{buildroot}
 %setup -q
 
 %build
@@ -59,7 +58,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc AUTHORS README
-%{_bindir}/%{name}*
+%{_bindir}/*
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -72,4 +71,3 @@ rm -rf %{buildroot}
 %{_libdir}/*.a
 %{_libdir}/*.la
 %{_includedir}/*.h
-
