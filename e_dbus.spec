@@ -4,8 +4,8 @@
 
 Summary: 	E17 basic convenience wrappers around dbus
 Name: 		e_dbus
-Version: 	0.5.0.050
-Release: 	%mkrel 2
+Version: 	0.5.0.060
+Release: 	%mkrel 1
 Source:		http://download.enlightenment.org/snapshots/LATEST/%{name}-%{version}.tar.bz2
 License: 	BSD
 Group: 		System/Servers
