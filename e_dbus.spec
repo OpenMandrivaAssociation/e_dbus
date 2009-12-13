@@ -4,7 +4,7 @@
 
 Summary: 	E17 basic convenience wrappers around dbus
 Name: 		e_dbus
-Version: 	0.5.0.062
+Version: 	0.5.0.063
 Release: 	%mkrel 1
 Source:		http://download.enlightenment.org/snapshots/LATEST/%{name}-%{version}.tar.bz2
 License: 	BSD
@@ -12,7 +12,7 @@ Group: 		System/Servers
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://www.enlightenment.org/
 BuildRequires:	dbus-devel
-BuildRequires:	ecore-devel >= 0.9.9.050
+BuildRequires:	ecore-devel >= 0.9.9.053
 
 %description
 This is the start of some basic convenience wrappers around dbus to
