@@ -1,18 +1,19 @@
-%define major		0
+%define major		1
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
 
 Summary: 	E17 basic convenience wrappers around dbus
 Name: 		e_dbus
-Version: 	0.5.0.49898
-Release: 	%mkrel 1
-Source:		http://download.enlightenment.org/snapshots/LATEST/%{name}-%{version}.tar.bz2
+Version: 	1.0.0
+Release: 	%mkrel -c beta 1
+Source:		http://download.enlightenment.org/releases/%{name}-%{version}.beta.tar.bz2
+Patch0:		e_dbus-1.0.0.beta-link.patch
 License: 	BSD
 Group: 		System/Servers
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://www.enlightenment.org/
 BuildRequires:	dbus-devel
-BuildRequires:	ecore-devel >= 0.9.9.053
+BuildRequires:	ecore-devel >= 1.0.0
 
 %description
 This is the start of some basic convenience wrappers around dbus to
@@ -39,7 +40,7 @@ Provides:	%{name}-devel = %{version}-%{release}
 %{name} development headers and libraries.
 
 %prep
-%setup -q
+%setup -qn %{name}-%{version}.beta
 
 %build
 autoreconf -fi
@@ -75,4 +76,4 @@ rm -rf %{buildroot}
 %{_libdir}/*.so
 %{_libdir}/*.a
 %{_libdir}/*.la
-%{_includedir}/*.h
+%{_includedir}/*
