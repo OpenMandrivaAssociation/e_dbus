@@ -5,8 +5,8 @@
 Summary: 	E17 basic convenience wrappers around dbus
 Name: 		e_dbus
 Version: 	1.0.0
-Release: 	%mkrel -c beta3 1
-Source:		http://download.enlightenment.org/releases/%{name}-%{version}.beta3.tar.bz2
+Release: 	%mkrel 1
+Source:		http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
 License: 	BSD
 Group: 		System/Servers
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -39,7 +39,7 @@ Provides:	%{name}-devel = %{version}-%{release}
 %{name} development headers and libraries.
 
 %prep
-%setup -qn %{name}-%{version}.beta3
+%setup -qn %{name}-%{version}
 
 %build
 autoreconf -fi
