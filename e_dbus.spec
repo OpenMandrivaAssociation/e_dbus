@@ -94,6 +94,7 @@ rm -rf %{buildroot}
 %files
 %doc AUTHORS README
 %{_bindir}/*
+%{_datadir}/%{name}/*
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
