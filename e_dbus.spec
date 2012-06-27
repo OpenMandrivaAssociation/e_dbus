@@ -12,7 +12,7 @@
 #tar -Jcf e_dbus-$PKG_VERSION.tar.xz e_dbus/ --exclude .svn --exclude .*ignore
 
 
-%define snapshot 1
+%define snapshot 0
 
 %if %snapshot
 %define	svndate	20120103
@@ -29,7 +29,7 @@ Name:		e_dbus
 Version:	1.1.99.%{svnrev}
 Release:	0.%{svndate}.1
 %else
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 %endif
 License:	BSD
@@ -38,12 +38,12 @@ URL:		http://www.enlightenment.org/
 %if %snapshot
 Source0:	%{name}-%{version}.tar.xz
 %else
-Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
+Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.gz
 %endif
 
 BuildRequires:	pkgconfig(dbus-1)
-BuildRequires:	pkgconfig(ecore) >= 1.0.0
-BuildRequires:	pkgconfig(eina) >= 1.0.0
+BuildRequires:	pkgconfig(ecore) >= 1.2.1
+BuildRequires:	pkgconfig(eina) >= 1.2.1
 
 %description
 This is the start of some basic convenience wrappers around dbus to
