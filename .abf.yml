@@ -1,2 +1,4 @@
 sources:
-  "e_dbus-1.2.0.tar.gz:"	2f093170369c65fdae3bd56470384cbb78faf8fb
+  "e_dbus-1.7.1.tar.gz": 5072699f5ebfaa9b3ffdba3c275e0f569130c2d8
+  e_dbus-1.7.2.tar.gz: 119af7ddeabf65e294c998ba27a7486027a5e67c
+  e_dbus-1.7.3.tar.gz: 1bd664721ea4910fb61cff3f4b16863ecdbd0772
