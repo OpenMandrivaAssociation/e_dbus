@@ -11,9 +11,11 @@ Group:		System/Servers
 URL:		http://www.enlightenment.org/
 Source0:	http://download.enlightenment.fr/releases/%{name}-%{version}.tar.bz2
 
+BuildRequires:	doxygen
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(ecore) >= 1.7.0
 BuildRequires:	pkgconfig(eina) >= 1.7.0
+BuildRequires:	pkgconfig(evas) >= 1.7.0
 
 %description
 This is the start of some basic convenience wrappers around dbus to
