@@ -4,12 +4,12 @@
 
 Summary:	E17 basic convenience wrappers around dbus
 Name:		e_dbus
-Version:	1.7.6
+Version:	1.7.7
 Release:	1
 License:	BSD
 Group:		System/Servers
 URL:		http://www.enlightenment.org/
-Source0:	http://download.enlightenment.fr/releases/%{name}-%{version}.tar.gz
+Source0:	http://download.enlightenment.fr/releases/%{name}-%{version}.tar.bz2
 
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(dbus-1)
