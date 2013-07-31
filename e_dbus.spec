@@ -4,13 +4,12 @@
 
 Summary:	E17 basic convenience wrappers around dbus
 Name:		e_dbus
-Version:	1.7.7
+Version:	1.7.8
 Release:	1
 License:	BSD
 Group:		System/Servers
-URL:		http://www.enlightenment.org/
+Url:		http://www.enlightenment.org/
 Source0:	http://download.enlightenment.fr/releases/%{name}-%{version}.tar.bz2
-
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(ecore) >= 1.7.0
@@ -26,7 +25,6 @@ heavily required for processing messages.
 %package -n %{libname}
 Summary:	Libraries for the %{name} package
 Group:		System/Libraries
-Obsoletes:	%{mklibname e_dbus 1} <= 0.01
 
 %description -n %{libname}
 Libraries for %{name}.
@@ -34,9 +32,9 @@ Libraries for %{name}.
 %package -n %{devname}
 Summary:	Headers and development libraries from %{name}
 Group:		Development/Other
-Requires:	%{libname} = %{version}-%{release}
-Requires:	%{name} = %{version}-%{release}
-Provides:	%{name}-devel = %{version}-%{release}
+Requires:	%{libname} = %{EVRD}
+Requires:	%{name} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{devname}
 %{name} development headers and libraries.
