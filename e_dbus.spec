@@ -8,7 +8,7 @@ Version:	1.7.8
 Release:	1
 License:	BSD
 Group:		System/Servers
-Url:		http://www.enlightenment.org/
+Url:		https://www.enlightenment.org/
 Source0:	http://download.enlightenment.fr/releases/%{name}-%{version}.tar.bz2
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(dbus-1)
