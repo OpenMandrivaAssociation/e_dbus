@@ -10,6 +10,11 @@ License:	BSD
 Group:		System/Servers
 Url:		https://www.enlightenment.org/
 Source0:	http://download.enlightenment.fr/releases/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(ecore) >= 1.7.0
